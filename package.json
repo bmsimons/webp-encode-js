@@ -1,0 +1,19 @@
+{
+  "name": "webp-encode-js",
+  "version": "1.0.0",
+  "description": "A frictionless WebP encoder for the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmsimons/webp-encode-js.git"
+  },
+  "author": "Bart Simons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmsimons/webp-encode-js/issues"
+  },
+  "homepage": "https://github.com/bmsimons/webp-encode-js#readme"
+}
