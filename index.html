@@ -4,13 +4,6 @@
         <meta charset="UTF-8">
         <title>WebP encoding with libwebp + emscripten</title>
 
-        <!-- <script type="module" src="node_modules/@spectrum-web-components/theme/sp-theme.js"></script>
-        <script type="module" src="node_modules/@spectrum-web-components/theme/theme-lightest.js"></script>
-        <script type="module" src="node_modules/@spectrum-web-components/theme/scale-large.js"></script>
-
-        <script type="module" src="node_modules/@spectrum-web-components/slider/sp-slider.js"></script>
-
-        <script type="module" src="node_modules/@vaadin/vaadin-upload/vaadin-upload.js"></script> -->
         <script type="module" src="components.js"></script>
     </head>
     <body>
@@ -27,6 +20,8 @@
                 const upload = document.querySelector("vaadin-upload");
 
                 upload.addEventListener("upload-request", (e) => {
+                    e.preventDefault();
+
                     const fileNameWithExt = e.detail.file.name;
                     const lastDotIndex = fileNameWithExt.lastIndexOf('.');
 
@@ -72,6 +67,9 @@
                     }
 
                     image.src = photoObjectURL;
+
+                    e.detail.xhr.open('GET', '/');
+                    e.detail.xhr.send();
                 });
             });
         </script>
